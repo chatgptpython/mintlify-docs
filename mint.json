@@ -20,7 +20,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:info@chatwize.ai"
+      "url": "mailto:hello@chatwize.com"
     }
   ],
   "primaryTab": {
@@ -31,7 +31,7 @@
       "name": "API References",
       "icon": "code",
       "url": "api-reference"
-    },
+    }
   ],
   "navigation": [
     {
@@ -115,7 +115,7 @@
         "api-reference/data-sources/delete",
         "api-reference/data-sources/delete_multi"
       ]
-    },
+    }
   ],
   "api": {
     "baseUrl": "https://app-chatwize.com/api",
