@@ -1,5 +1,5 @@
 {
-  "name": "GPT-Trainer API",
+  "name": "Chatwize API",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -20,7 +20,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hello@gpt-trainer.com"
+      "url": "mailto:info@chatwize.ai"
     }
   ],
   "primaryTab": {
@@ -32,11 +32,6 @@
       "icon": "code",
       "url": "api-reference"
     },
-    {
-      "name": "Whitelabel",
-      "icon": "browser",
-      "url": "whitelabel"
-    }
   ],
   "navigation": [
     {
@@ -121,20 +116,12 @@
         "api-reference/data-sources/delete_multi"
       ]
     },
-    {
-      "group": "Whitelabel Dashboard",
-      "pages": [
-        "whitelabel/whitelabel-intro",
-        "whitelabel/whitelabel-plans",
-        "whitelabel/whitelabel-users"
-      ]
-    }
   ],
   "api": {
-    "baseUrl": "https://app.gpt-trainer.com/api",
+    "baseUrl": "https://app-chatwize.com/api",
     "auth": {
       "method": "bearer"
     }
   },
-  "openapi": "https://app.gpt-trainer.com/api/apidoc/openapi.json"
+  "openapi": "https://app-chatwize.com/api/apidoc/openapi.json"
 }
