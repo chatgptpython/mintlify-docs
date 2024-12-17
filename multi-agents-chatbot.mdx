@@ -6,7 +6,9 @@ title: Multi-Agents Chatbot
 
 Chatwize is the first and most powerful no-code AI Chat framework that implements a multi-agent architecture. Multiple AI Agents work together in a coordinated orchestration to enable advanced workflow automations.
 
-![](12312.png)
+<Frame>
+  <img src="/images/12312.png" />
+</Frame>
 
 We present this guide to help you understand how our Agents work together, as well as share with you some best practices surrounding multi-agent chatbot design.
 
@@ -26,7 +28,10 @@ The AI Supervisor assigns user queries to AI Agents based on the Agent descripti
 
 * Agent Prompt - How should the Agent perform its tasks?
 
-![](213213.png)
+<Frame>
+  <img src="/images/213213.png" />
+</Frame>
+
 
 AI Agent description is different from the Prompt. Description should tell the AI Supervisor what the Agent is designed to do at a high level, focusing on the type of user queries it should handle. Prompt is a set of instructions telling the AI Agent how to behave.
 
@@ -109,8 +114,9 @@ If the Agent that handled the user query was not the correct one, you can return
 If the correct Agent handled the user query but the response was not what you expected, then the issue resides within the Agent itself. You will then need to update the Agent configuration. The most straightforward way to fix a response is by revising the AI’s answer directly:
 
 
-
-![](321321.png)
+<Frame>
+  <img src="/images/321321.png" />
+</Frame>
 
 This ensures that the chatbot will generate an answer based on what you revised every time it encounters the question in the future, assuming the same Agent was chosen to respond to the query.
 
