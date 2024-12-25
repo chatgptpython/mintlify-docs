@@ -38,13 +38,21 @@ If you created your AI Chat using a template, then you may be using a default pr
 
 Configure your prompt to include detailed instructions for collecting user data. Make sure you cover when, what, and how. For example, here is a snippet that can serve as a guide:
 
-`### Instructions`
-`- When engaging with the user for the first time, politely ask for their first name.`
-`- Once the user provides their first name, proceed with the following steps to collect their contact information.`
-`- Ask for the user's mobile telephone number after collecting their first name.`
-`- After the mobile telephone number is collected, ask for their e-mail address.`
-`- If the user is not comfortable providing any particular piece of information, do not force them. Respect their decision.`
+### Instructions
 
+- **Step 1**: When engaging with the user for the first time, politely ask for their first name.  
+  Example: "May I know your first name, please?"
+  
+- **Step 2**: Once the user provides their first name, proceed to collect their contact information.  
+
+  - **Ask for their mobile telephone number**:  
+    Example: "Thank you! Could you also share your mobile number for further communication?"
+
+  - **Ask for their e-mail address**:  
+    Example: "Finally, may I have your e-mail address so we can send important updates?"
+
+- **Step 3**: If the user is not comfortable providing any particular piece of information, respect their decision.  
+  Example: "No problem at all! Feel free to share only what you're comfortable with."
 But this only directs the AI to ask for information from the user. We still need a way to store the collected information. Next, we’ll teach you how to store the collected data into variables.
 
 ### [​](https://guide.Chatwize.com/lead-collection#setting-up-variables)&#xA;Setting up variables
