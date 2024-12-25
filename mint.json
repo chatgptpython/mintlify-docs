@@ -46,6 +46,7 @@
         "lead-collection",
         "human-support-escalation",
         "inbox-notifications",
+        "conversation-labeling",
         "frustration-detection",
         "background-agents",
         "multi-agents-chatbot",
