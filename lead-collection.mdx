@@ -1,16 +1,15 @@
 There are two ways to collect data from users when they engage with your AI Chat.
 
 1. Through a form
-
 2. Conversationally
 
-There are pros and cons for each approach. Forms are easier to set up and is programmatic, but collecting information conversationally is more natural and engaging despite the added complexity. You can send any collected data via webhook to a CRM as soon as your user submits it.
+There are pros and cons for each approach. Forms are easier to set up and are programmatic, but collecting information conversationally is more natural and engaging despite the added complexity. You can send any collected data via webhook to a CRM as soon as your user submits it.
 
-[​](https://guide-chatwize.com/lead-collection#collecting-data-through-a-form)
-Collecting data through a form
-------------------------------
+---
 
-To add a form to your AI Chat, go to Customizations tab on the left navigation menu, then scroll down until you see the “Form” section:
+### Collecting Data Through a Form
+
+To add a form to your AI Chat, go to the **Customizations** tab on the left navigation menu, then scroll down until you see the “Form” section:
 
 ![](lead-collection-13.png)
 
@@ -22,25 +21,25 @@ For custom fields, you can change the field types (text, dropdown, checkbox). Yo
 
 ![](https://mintlify.s3.us-west-1.amazonaws.com/paladinmaxinc/images/lead-collection-15.png)
 
-[​](https://guide.Chatwize.com/lead-collection#collecting-data-conversationally)
-Collecting data conversationally
---------------------------------
+---
+
+### Collecting Data Conversationally
 
 If you want to maintain a natural conversational flow and collect data from users directly, you will have to configure your AI Agent(s) prompt and set up variables to store the collected information.
 
-### [​](https://guide.Chatwize.com/lead-collection#editing-the-prompt)&#xA;Editing the prompt
+---
 
-The behavior of your AI Chat is governed by your AI Agent(s)‘s prompt. To review and edit the prompt, go to AI Agents tab on the left navigation menu, then click on the Agent you’d like to edit.
+### Editing the Prompt
 
-If you created your AI Chat using a template, then you may be using a default prompt we generated for you. If this is the first time you are configuring an AI Agent prompt, we recommend you to read our Prompt Engineering guide for best practices.
+The behavior of your AI Chat is governed by your AI Agent(s)‘s prompt. To review and edit the prompt, go to the **AI Agents** tab on the left navigation menu, then click on the Agent you’d like to edit.
 
-![](lead-collection-16.png)![](lead-collection-17.PNG)
+If you created your AI Chat using a template, then you may be using a default prompt we generated for you. If this is the first time you are configuring an AI Agent prompt, we recommend you to read our **Prompt Engineering guide** for best practices.
+
+![](lead-collection-16.png)
+![](lead-collection-17.PNG)
 
 Configure your prompt to include detailed instructions for collecting user data. Make sure you cover when, what, and how. For example, here is a snippet that can serve as a guide:
 
-
----
-title: Instructions
 ---
 
 ### Instructions
@@ -61,29 +60,3 @@ Inside, you can create variables to store information that is collected from the
 ![](https://mintlify.s3.us-west-1.amazonaws.com/paladinmaxinc/images/lead-collection-19.png)
 
 *The more examples you provide, the better it is for the AI to understand the format you’re looking for.*
-
-Make sure to define enough variables to store all the information you are requesting from the user. In the example prompt snippet above, you would need the user’s name, phone, and email.
-
-Once everything has been set up, you can test the AI Chat in preview mode. If everything works as intended, you should see the data being collected in your inbox every time a user engages meaningfully with your AI Chat.
-
-Variable values can change if the user specifies that they want to make a correction or update. The AI is generally good at understanding the correct value to assign.
-
-![](20.PNG)
-
-[​](https://guide.Chatwize.com/lead-collection#sending-data-to-your-crm)
-Sending data to your CRM
-------------------------
-
-Regardless of whether you want to collect data using a form or conversationally, you may wish to send that information to another CRM for follow up. Chatwize supports webhooks with smart triggers that can alert you to new leads as soon as they engage with the AI.
-
-Go to Customizations tab on the left navigation menu. Then scroll down to “Webhook”. Click to expand it.
-
-![](21.PNG)
-
-If you are using a form, then you can select the “Form Submission” event and specify the API endpoint where you want the collected data to be sent (POST request).
-
-If you are using variables to store user data, then you can select the “Data Collection” event and choose the variables you’d like to be sent. **Please note that the webhook will only be triggered if all your designated variables have been collected (must not be empty).**
-
-If you want certain variables to be optional, then you can give it a default value during variable setup. This way, it will always be in a populated state and never empty.
-
-[​](https://guide-chatwize.com/lead-collection#sending-data-by-email)
