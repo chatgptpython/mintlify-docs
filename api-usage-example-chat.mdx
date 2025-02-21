@@ -26,7 +26,7 @@ Before sending messages to the chatbot, it's essential to create a chat session.
 
 ## Create a Chat Session
 
-To create a chat session, you need to use a POST request to the API endpoint: `https://app-chatwize.com/api/v1/chatbot/{uuid}/session/create`.
+To create a chat session, you need to use a POST request to the API endpoint: `https://app.chatwize.ai/api/v1/chatbot/{uuid}/session/create`.
 
 <Warning>Make sure to replace `{uuid}` with the UUID of your chatbot.</Warning>
 
@@ -39,7 +39,7 @@ Here're example command to create a chatbot using the Chatwize API:
 <CodeGroup>
 
 ```bash Curl
-curl --location --request POST 'https://app-chatwize.com/api/v1/chatbot/{uuid}/session/create' \
+curl --location --request POST 'https://app.chatwize.ai/api/v1/chatbot/{uuid}/session/create' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <token>' \
 ```
@@ -47,7 +47,7 @@ curl --location --request POST 'https://app-chatwize.com/api/v1/chatbot/{uuid}/s
 ```py Python
 import requests
 
-url = 'https://app-chatwize.com/api/v1/chatbot/{uuid}/session/create'
+url = 'https://app.chatwize.ai/api/v1/chatbot/{uuid}/session/create'
 headers = {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer <token>'
@@ -70,7 +70,7 @@ else:
 ```ts JavaScript
 const axios = require('axios');
 
-const url = 'https://app-chatwize.com/api/v1/chatbot/{uuid}/session/create';
+const url = 'https://app.chatwize.ai/api/v1/chatbot/{uuid}/session/create';
 const headers = {
     'Content-Type': 'application/json',
     'Authorization': 'Bearer <token>'
@@ -107,7 +107,7 @@ The `uuid` from this response is essential for sending messages within the estab
 ## Send Messages
 
 With a chat session created, you can now send messages to your chatbot. Use the following API endpoint to send messages:
-`https://app-chatwize.com/api/v1/session/{uuid}/message/stream`
+`https://app.chatwize.ai/api/v1/session/{uuid}/message/stream`
 
 <Warning>Make sure to replace `{uuid}` with the UUID of created session.</Warning>
 
@@ -119,7 +119,7 @@ Here're example command to create a message using the Chatwize API:
 
 <CodeGroup>
     ```bash Curl
-curl --location --request POST 'https://app-chatwize.com/api/v1/session/{uuid}/message/stream' \
+curl --location --request POST 'https://app.chatwize.ai/api/v1/session/{uuid}/message/stream' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
 --data-raw '{"query": "Your query goes here"}'
@@ -128,7 +128,7 @@ curl --location --request POST 'https://app-chatwize.com/api/v1/session/{uuid}/m
 ```py Python
 import requests
 
-url = f"https://app-chatwize.com/api/v1/session/{uuid}/message/stream"
+url = f"https://app.chatwize.ai/api/v1/session/{uuid}/message/stream"
 headers = {
     "Authorization": "Bearer YOUR_ACCESS_TOKEN",
     "Content-Type": "application/json"
@@ -150,7 +150,7 @@ else:
 
 ```ts JavaScript
 const xhr = new XMLHttpRequest();
-xhr.open("POST", `https://app-chatwize.com/api/v1/session/{uuid}/message/stream`, true);
+xhr.open("POST", `https://app.chatwize.ai/api/v1/session/{uuid}/message/stream`, true);
 
 xhr.setRequestHeader("Authorization", "Bearer YOUR_ACCESS_TOKEN");
 xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
