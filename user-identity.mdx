@@ -1,5 +1,6 @@
 ---
-title: User Identity Verification
+title: "User Identity Verification"
+description: "User Identity Verification helps secure your chatbot by validating users through token-based authentication for each interaction."
 ---
 
 This guide will walk you through implementing a robust authentication system within your chatbot.
@@ -13,7 +14,7 @@ Once the User Identity Verification is enabled your chatbot becomes equipped to 
 This means each time a user attempts to interact with the chatbot, their identity token will be reviewed for authenticity.
 
 <Frame>
-  <img src="/images/user-identity-1.png" />
+  ![](/images/user-identity-1.png)
 </Frame>
 
 ## Step 2: API Endpoint
@@ -23,11 +24,10 @@ This means each time a user attempts to interact with the chatbot, their identit
 It is essential to set up an API endpoint that will handle the verification of user tokens. This endpoint must be configured to accept POST requests.
 
 1. **Specify the API Endpoint:** In your chatbot settings, provide the URL of the API endpoint. This is the server address where the token verification requests will be sent.
-
 2. **Configure for POST Requests:** Ensure that your API endpoint is configured to handle POST requests. This is crucial as the Chatwize will send token data via POST requests for verification.
 
 <Frame>
-  <img src="/images/user-identity-2.png" />
+  ![](/images/user-identity-2.png)
 </Frame>
 
 ### Verification Process Flow
@@ -35,11 +35,8 @@ It is essential to set up an API endpoint that will handle the verification of u
 Here's what happens each time a chat is initiated:
 
 1. **Token Submission:** Whenever a chat is rendered, Chatwize automatically sends a verification request to the provided API endpoint. This request includes the user's token.
-
 2. **Processing the Request:** Your API endpoint should process this request, verifying the token's validity.
-
 3. **Outcome Handling:**
-
    - **Successful Verification:** If the token is verified successfully, the chatbot will allow the authenticated user to proceed with the chat.
    - **Failed Verification:** In case the API returns an error (indicating a failed verification), the authentication will be deemed unsuccessful. Consequently, the user will be redirected to an error screen.
 
@@ -49,7 +46,7 @@ To enhance the functionality of the User Identity Verification process and maint
 you have the option to save the data from successful verification responses.
 
 <Frame>
-  <img src="/images/user-identity-3.png" />
+  ![](/images/user-identity-3.png)
 </Frame>
 
 Every time a user is successfully authenticated, the response from the verification process (typically including user identification details) is stored.
@@ -124,5 +121,5 @@ If there is a need to change the token, simply update the src attribute of the i
 
 Upon updating the token in the URL, the iframe will reload, ensuring that the new token is used for authentication.
 
-Congratulations! You have now successfully completed the setup of the User Identity Verification feature for your Chatwize Chatbot.
+Congratulations\! You have now successfully completed the setup of the User Identity Verification feature for your Chatwize Chatbot.
 By following the steps outlined in this guide, you have enabled a robust and secure method for authenticating users, ensuring a safe and reliable user experience.
