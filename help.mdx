@@ -1,5 +1,6 @@
 ---
-title: Why does my chatbot not answer correctly?
+title: "Why does my chatbot not answer correctly?"
+description: "Why does my chatbot not answer correctly? Understand the limits of LLMs and how RAG helps Chatwize respond based on your uploaded data."
 ---
 
 When Google scientists first introduced the concept of the “transformer” (https://arxiv.org/pdf/1706.03762.pdf), the idea received attention within
@@ -103,7 +104,7 @@ and the chatbot will now “know” the answer.
 Here is a good visual from AWS illustrating at a high level the series of RAG steps:
 
 <Frame caption="https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-customize-rag.html">
-  <img src="/images/help-1.png" />
+  ![](/images/help-1.png)
 </Frame>
 
 However, this approach also has limitations. The following types of queries generally work well:
@@ -127,5 +128,5 @@ If your use case demands it, our multi-Agent architecture and function-calling s
 but they require advanced configuration on your part. Please refer to our other related articles for best practices when deploying
 multi-agent chatbots with function-calling capabilities.
 
-There may be alternative ways for you to optimize your chatbot&apos;s performance by improving the quality of your training data.
+There may be alternative ways for you to optimize your chatbot's performance by improving the quality of your training data.
 To learn how, please check out [Best practices for preparing training data](/best-practices).
