@@ -1,5 +1,6 @@
 ---
-title:  Create chatbot
+title: "Create chatbot"
+description: "Create Chatbot using the Chatwize API by following this step-by-step guide. Learn how to initiate a chatbot through an API request."
 ---
 
 In this guide, we will walk through the process of creating a chatbot using an API.
@@ -13,7 +14,7 @@ Before you begin, make sure you have the following:
 
 ## API Endpoint
 
-The API endpoint for creating a chatbot is: 
+The API endpoint for creating a chatbot is:
 
 ```
 https://app.chatwize.ai/api/v1/chatbot/create
@@ -39,36 +40,68 @@ To create a chatbot, you need to send a POST request to the API endpoint with a 
 }
 ```
 
-- model (string, optional): Specify the model you want to use. In this example, we're using <code>gpt-3.5-turbo</code>.
+- model (string, optional): Specify the model you want to use. In this example, we're using <code>
+    gpt-3.5-turbo
+  </code>
+  .
 
-    Options available <code>gpt-3.5-turbo</code>, <code>gpt-3.5-turbo-16k</code>, <code>gpt-4</code>
-
+  Options available <code>
+    gpt-3.5-turbo
+  </code>
+  , <code>
+    gpt-3.5-turbo-16k
+  </code>
+  , <code>
+    gpt-4
+  </code>
 - name (string, required): Provide a name for your chatbot.
 - prompt (string, optional): You can provide an initial prompt for your chatbot.
 - rate_limit (array, optional): Set the rate limit for the chatbot in messages per minute. It's an array with two values: [20, 240].
 
-    First number: amount of messages. Min <code>1</code> - Max <code>100</code>
-    Second number: amount of seconds. Min <code>1</code> - Max <code>360</code>
-
+  First number: amount of messages. Min <code>
+    1
+  </code>
+   - Max <code>
+    100
+  </code>
+  
+  Second number: amount of seconds. Min <code>
+    1
+  </code>
+   - Max <code>
+    360
+  </code>
 - rate_limit_message (string, optional): Define a message to display when the rate limit is exceeded.
 - show_citations (boolean, optional): Set to true if you want the chatbot to show citations for its responses.
 - temperature (float, optional): You can adjust the temperature parameter for response randomness. A value of 0 makes responses deterministic, while higher values increase randomness.
 
-    Options are values as a float between <code>0</code> and <code>1</code> 
-
+  Options are values as a float between <code>
+    0
+  </code>
+   and <code>
+    1
+  </code>
 - visibility (string, optional): Set the visibility of your chatbot. Options are "private" or "public."
 
-    Options available <code>private</code>, <code>public</code>, <code>hybrid</code>
-
+  Options available <code>
+    private
+  </code>
+  , <code>
+    public
+  </code>
+  , <code>
+    hybrid
+  </code>
 
 ## Example Request
 
 Here're example command sto create a chatbot using the Chatwize API:
 
-<Warning>Replace **token** with your actual API key.</Warning>
+<Warning>
+  Replace **token** with your actual API key.
+</Warning>
 
 <CodeGroup>
-
 
 ```bash Curl
 curl --location --request POST 'https://app.chatwize.ai/api/v1/chatbot/create' \
@@ -88,6 +121,7 @@ curl --location --request POST 'https://app.chatwize.ai/api/v1/chatbot/create' \
     "visibility": "private"
 }'
 ```
+
 
 ```py Python
 import requests
@@ -121,6 +155,7 @@ else:
     print("Request failed with status code:", response.status_code)
     print(response.text)
 ```
+
 
 ```ts JavaScript
 const axios = require('axios');
@@ -157,4 +192,4 @@ axios.post(url, data, { headers })
 
 </CodeGroup>
 
-That's it! You've now learned how to create your own chatbot using the Chatwize API.
+That's it\! You've now learned how to create your own chatbot using the Chatwize API.

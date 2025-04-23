@@ -1,12 +1,13 @@
 ---
-title: Best practices for preparing training data
+title: "Best practices for preparing training data"
+description: "Best practices for preparing training data help improve your chatbot’s performance by ensuring clean, structured and relevant input for LLMs."
 ---
 
 The accuracy and consistency of your chatbot depends on a number of factors:
 
-    - Quality of your training data
-    - Large language model (LLM) selection
-    - Explicitness of base prompt
+- Quality of your training data
+- Large language model (LLM) selection
+- Explicitness of base prompt
 
 LLMs, like all statistics-based models, require training data during their construction. As they often say in the AI research community, “your model is only as good as your training data”.
 The best way to dictate and optimize your chatbot’s performance is to clean up its training data. In the following section, we provide some best practices for structuring your training data.
@@ -36,13 +37,13 @@ This error is especially pronounced when working with websites. Since web browse
 you see can be very different from what our scraper captures. Furthermore, most layout information and data residing in images / illustrations / videos are lost during the scraping process.
 
 <Frame>
-  <img src="/images/best-practices-1.png" />
+  ![](/images/best-practices-1.png)
 </Frame>
 
-_Chatwize’s own pricing table on https://Chatwize.ai/pricing as rendered via the Chrome browser._
+[_Chatwize’s own pricing table on https://Chatwize.ai/pricing as rendered via the Chrome browser._](https://Chatwize.ai/pricing)
 
 <Frame>
-  <img src="/images/best-practices-2.png" />
+  ![](/images/best-practices-2.png)
 </Frame>
 
 _The same website content, after our scraper captures it and associated chunking has been done._
@@ -64,11 +65,11 @@ For example, if the user asks:
 
 then, the algorithm may pull the following chunks to serve as reference context:
 
-    > [Chunk 1] iPhone SE’s current price is $250.
-    >
-    > [Chunk 2] Original iPhone SE is $199.
-    >
-    > [Chunk 3] iPhone 5’s price is $600.
+> [Chunk 1] iPhone SE’s current price is $250.
+>
+> [Chunk 2] Original iPhone SE is $199.
+>
+> [Chunk 3] iPhone 5’s price is $600.
 
 As you can see, these chunks all explicitly mention the price of iPhone SE, so they are semantically similar to the user’s original query.
 However, they contain factually inconsistent information. When this happens, you may notice the AI generating different responses each

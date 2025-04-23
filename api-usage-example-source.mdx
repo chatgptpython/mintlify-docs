@@ -1,5 +1,6 @@
 ---
-title: Uploading Data Sources
+title: "Uploading Data Sources"
+description: "Uploading Data Sources to your chatbot is simple with the Chatwize API—follow this guide to connect your data in minutes."
 ---
 
 In this guide, we will walk through the process of uploading data sources to your chatbot using the Chatwize API.
@@ -15,7 +16,9 @@ Before you begin, make sure you have the following:
 
 The API endpoint for uploading data sources to your chatbot is: `https://app.chatwize.ai/api/v1/chatbot/{uuid}/data-source/url`.
 
-<Warning>Make sure to replace `{uuid}` with the UUID of your chatbot..</Warning>
+<Warning>
+  Make sure to replace `{uuid}` with the UUID of your chatbot..
+</Warning>
 
 ## Request Body
 
@@ -33,7 +36,9 @@ To upload a data source, you need to send a POST request to the API endpoint wit
 
 Here're example command sto create a chatbot using the Chatwize API:
 
-<Warning>Replace **token** with your actual API key.</Warning>
+<Warning>
+  Replace **token** with your actual API key.
+</Warning>
 
 <CodeGroup>
 
@@ -45,6 +50,7 @@ curl --location --request POST 'https://app.chatwize.ai/api/v1/chatbot/{uuid}/da
   "url": "string"
 }'
 ```
+
 
 ```py Python
 import requests
@@ -72,6 +78,7 @@ else:
     print("Request failed with status code:", response.status_code)
     print(response.text)
 ```
+
 
 ```ts JavaScript
 const axios = require('axios');
@@ -102,4 +109,4 @@ axios.post(url, data, { headers, params })
 
 </CodeGroup>
 
-That's it! You've now learned how to upload data sources to your chatbot using the Chatwize API.
+That's it\! You've now learned how to upload data sources to your chatbot using the Chatwize API.

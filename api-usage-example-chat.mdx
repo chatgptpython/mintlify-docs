@@ -1,8 +1,9 @@
 ---
-title: Start Chatting with Chatbot
+title: "Start Chatting with Chatbot"
+description: "Start Chatting with Chatbot by creating chat sessions using the Chatwize API. Learn how to structure your messages and maintain context."
 ---
 
-In this section, we will guide you on how to start chatting with your chatbot using the Chatwize API. 
+In this section, we will guide you on how to start chatting with your chatbot using the Chatwize API.
 Before you begin, please ensure you meet the following prerequisites:
 
 ## Prerequisites
@@ -11,7 +12,7 @@ Before you begin, please ensure you meet the following prerequisites:
 - A development environment or tool for making HTTP requests, such as Curl or a programming language like Python.
 
 <Note>
-    Please note that to chat on specific topics, your chatbot needs to have relevant data sources uploaded.
+  Please note that to chat on specific topics, your chatbot needs to have relevant data sources uploaded.
 </Note>
 
 ## Why Create a Chat Session?
@@ -19,22 +20,24 @@ Before you begin, please ensure you meet the following prerequisites:
 Before sending messages to the chatbot, it's essential to create a chat session. A chat session acts as a container that holds all the messages exchanged between you and the chatbot. Here's why creating a chat session is necessary:
 
 1. **Message Context:** A chat session allows you to maintain context throughout a conversation. It ensures that the chatbot understands the context of your questions or statements.
-
 2. **Order of Messages:** The chat session helps in maintaining the order of messages. This is crucial for having meaningful and coherent conversations with the chatbot.
-
 3. **State Management:** The chat session allows you to manage the state of the conversation. You can continue a conversation seamlessly by referencing the session UUID.
 
 ## Create a Chat Session
 
 To create a chat session, you need to use a POST request to the API endpoint: `https://app.chatwize.ai/api/v1/chatbot/{uuid}/session/create`.
 
-<Warning>Make sure to replace `{uuid}` with the UUID of your chatbot.</Warning>
+<Warning>
+  Make sure to replace `{uuid}` with the UUID of your chatbot.
+</Warning>
 
 ## Example Request
 
 Here're example command to create a chatbot using the Chatwize API:
 
-<Warning>Replace **token** with your actual API key.</Warning>
+<Warning>
+  Replace **token** with your actual API key.
+</Warning>
 
 <CodeGroup>
 
@@ -43,6 +46,7 @@ curl --location --request POST 'https://app.chatwize.ai/api/v1/chatbot/{uuid}/se
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <token>' \
 ```
+
 
 ```py Python
 import requests
@@ -66,6 +70,7 @@ else:
     print("Request failed with status code:", response.status_code)
     print(response.text)
 ```
+
 
 ```ts JavaScript
 const axios = require('axios');
@@ -109,21 +114,27 @@ The `uuid` from this response is essential for sending messages within the estab
 With a chat session created, you can now send messages to your chatbot. Use the following API endpoint to send messages:
 `https://app.chatwize.ai/api/v1/session/{uuid}/message/stream`
 
-<Warning>Make sure to replace `{uuid}` with the UUID of created session.</Warning>
+<Warning>
+  Make sure to replace `{uuid}` with the UUID of created session.
+</Warning>
 
 ## Example Request
 
 Here're example command to create a message using the Chatwize API:
 
-<Warning>Replace **token** with your actual API key.</Warning>
+<Warning>
+  Replace **token** with your actual API key.
+</Warning>
 
 <CodeGroup>
-    ```bash Curl
+
+```bash Curl
 curl --location --request POST 'https://app.chatwize.ai/api/v1/session/{uuid}/message/stream' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
 --data-raw '{"query": "Your query goes here"}'
 ```
+
 
 ```py Python
 import requests
@@ -147,6 +158,7 @@ if response.status_code == 200:
 else:
     print("Error:", response.status_code)
 ```
+
 
 ```ts JavaScript
 const xhr = new XMLHttpRequest();
@@ -174,6 +186,7 @@ xhr.onreadystatechange = () => {
     }
 };
 ```
+
 </CodeGroup>
 
-That's it! You've now learned how to chat with your own chatbot using the GPT-trainer API.
+That's it\! You've now learned how to chat with your own chatbot using the GPT-trainer API.
